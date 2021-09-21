@@ -82,10 +82,13 @@ def search(text):
 
 # демонстрирует работу кода.
 def main():
-    line = input("Введите запрос: ")
-    print("САМЫЕ ПОДХОДЯЩИЕ СЕРИИ:")
-    for i, ep in enumerate(search(line)[:10]):
-        print(str(i+1)+".", ep)
+    line = "a"
+    while line != "":
+        line = input("Введите запрос: ")
+        print("САМЫЕ ПОДХОДЯЩИЕ СЕРИИ:")
+        for i, ep in enumerate(search(line)[:10]):
+            print(str(i+1)+".", ep)
+        print()
 
 
 if __name__ == '__main__':
